@@ -1,0 +1,157 @@
+<div class="min-h-screen">
+  <!-- Hero -->
+  <section id="new" class="kushan-hero-gradient relative overflow-hidden rounded-2xl border border-white/10 p-8 md:rounded-2xl md:p-12">
+    <div class="pointer-events-none absolute -left-16 top-12 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(124,92,255,0.35),transparent_60%)] blur-2xl"></div>
+    <div class="pointer-events-none absolute -right-16 -top-8 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(34,211,238,0.25),transparent_60%)] blur-2xl"></div>
+
+    <div class="relative grid items-center gap-8 md:grid-cols-2">
+      <div class="animate-fade-up" style="animation-delay: 50ms">
+        <span class="badge inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs">
+          <span class="inline-block h-1.5 w-1.5 rounded-full bg-kushan-primary"></span>
+          New Arrivals
+        </span>
+        <h1 class="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
+          Modern luxury essentials for everyday elevation.
+        </h1>
+        <p class="mt-4 max-w-xl text-pretty text-base text-kushan-subtle md:text-lg">
+          Crafted with premium materials and precise details—designed to move with you from day to night.
+        </p>
+
+        <div class="mt-6 flex flex-col items-start gap-3 sm:flex-row">
+          <a href="#featured" class="btn-primary inline-flex items-center gap-2 rounded-lg px-5 py-3 shadow-brand transition-transform hover:scale-[1.02] active:scale-[0.98]">
+            Shop New Arrivals
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"></path>
+              <path d="M13 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <a href="#collections" class="btn-ghost inline-flex items-center gap-2 rounded-lg px-5 py-3 text-kushan-text transition-all">
+            Explore Collections
+          </a>
+        </div>
+
+        <div class="mt-6 flex items-center gap-6 text-xs text-kushan-subtle">
+          <div class="inline-flex items-center gap-2">
+            <span class="h-1.5 w-1.5 rounded-full bg-kushan-accent"></span>
+            Free shipping over $150
+          </div>
+          <div class="inline-flex items-center gap-2">
+            <span class="h-1.5 w-1.5 rounded-full bg-kushan-primary"></span>
+            30-day returns
+          </div>
+        </div>
+      </div>
+
+      <div class="relative h-[320px] w-full overflow-hidden rounded-xl border border-white/10 bg-white/5 shadow-subtle md:h-[420px]" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=1600&auto=format&fit=crop"
+          alt="Kushan hero collection"
+          class="absolute inset-0 h-full w-full object-cover"
+          loading="eager"
+        />
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0b0d13] via-transparent to-transparent opacity-70"></div>
+        <div class="absolute bottom-4 left-4 rounded-md border border-white/10 bg-white/5 px-3 py-2 backdrop-blur-sm">
+          <span class="text-xs text-kushan-subtle">Featured • 2025</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Collections -->
+  <section id="collections" class="mt-12 md:mt-16">
+    <div class="mb-6 flex items-end justify-between">
+      <div>
+        <h2 class="text-2xl font-semibold tracking-tight md:text-3xl">Featured Collections</h2>
+        <p class="mt-1 text-sm text-kushan-subtle">Curated stories that define the season.</p>
+      </div>
+      <a href="#" class="hidden text-sm text-kushan-subtle underline-offset-4 hover:text-kushan-text hover:underline md:inline">View all</a>
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <a
+        *ngFor="let col of featuredCollections; let i = index"
+        [href]="col.href"
+        class="group relative overflow-hidden rounded-xl"
+      >
+        <article class="kushan-card relative h-72 overflow-hidden rounded-xl transition-transform duration-300 ease-out hover:-translate-y-0.5" [style.animationDelay]="(150 + i*120) + 'ms'">
+          <div class="absolute inset-0">
+            <img [src]="col.image" [alt]="col.name" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0b0d13] via-transparent to-transparent opacity-80"></div>
+          </div>
+          <div class="absolute inset-0 flex flex-col justify-end p-5">
+            <h3 class="text-lg font-semibold">{{ col.name }}</h3>
+            <p class="mt-1 line-clamp-2 text-sm text-kushan-subtle">
+              {{ col.description }}
+            </p>
+            <div class="mt-4 inline-flex items-center gap-2 text-sm text-kushan-text">
+              Explore
+              <svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform group-hover:translate-x-[2px]" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14"></path>
+                <path d="M13 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </div>
+        </article>
+      </a>
+    </div>
+  </section>
+
+  <!-- See Products: Couches -->
+  <section id="featured" class="mt-12 md:mt-16">
+    <div class="mb-6 flex items-end justify-between">
+      <div>
+        <h2 class="text-2xl font-semibold tracking-tight md:text-3xl">See Products</h2>
+        <p class="mt-1 text-sm text-kushan-subtle">A curated selection of modern couches and sofas.</p>
+      </div>
+      <a href="#" class="hidden text-sm text-kushan-subtle underline-offset-4 hover:text-kushan-text hover:underline md:inline">Shop all couches</a>
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <a
+        *ngFor="let p of couchProducts; let i = index"
+        [href]="p.href"
+        class="group relative overflow-hidden rounded-xl"
+        [attr.aria-label]="p.name"
+      >
+        <article class="kushan-card relative h-64 overflow-hidden rounded-xl transition-transform duration-300 ease-out hover:-translate-y-0.5 md:h-72" [style.animationDelay]="(120 + i*80) + 'ms'">
+          <img
+            [src]="p.image"
+            [alt]="p.name"
+            class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0b0d13] via-transparent to-transparent opacity-80"></div>
+          <div class="absolute inset-0 flex items-end p-4">
+            <div>
+              <h3 class="text-sm font-semibold md:text-base">{{ p.name }}</h3>
+              <div class="mt-2 inline-flex items-center gap-2 text-xs text-kushan-text">
+                View
+                <svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform group-hover:translate-x-[2px]" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14"></path>
+                  <path d="M13 5l7 7-7 7"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </article>
+      </a>
+    </div>
+  </section>
+
+  <!-- Brand Story Snippet -->
+  <section id="about" class="mt-12 md:mt-16">
+    <div class="kushan-card rounded-xl p-6 md:p-8">
+      <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+        <div class="max-w-2xl">
+          <h3 class="text-lg font-semibold">The Kushan philosophy</h3>
+          <p class="mt-2 text-sm text-kushan-subtle">
+            We design with intention—balancing form and function through precise construction and elevated materials. Each piece serves a purpose: to feel as considered as it looks.
+          </p>
+        </div>
+        <a href="#story" class="btn-ghost inline-flex items-center gap-2 rounded-lg px-5 py-3 text-kushan-text transition-all">
+          Learn more
+        </a>
+      </div>
+    </div>
+  </section>
+</div>

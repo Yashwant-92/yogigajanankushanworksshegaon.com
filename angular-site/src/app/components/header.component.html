@@ -1,0 +1,49 @@
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0d13]/70 backdrop-blur-md">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
+    <a href="/" aria-label="Kushan Home" class="group inline-flex items-center gap-2">
+      <span class="relative inline-flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-transform group-hover:scale-105">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true" fill="none">
+          <path d="M4 18L12 6l8 12" stroke="url(#g1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <defs>
+            <linearGradient id="g1" x1="4" y1="6" x2="20" y2="18">
+              <stop offset="0%" stop-color="#7c5cff" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </span>
+      <span class="text-lg font-semibold tracking-wide">Kushan</span>
+    </a>
+
+    <nav class="hidden items-center gap-6 md:flex">
+      <a class="text-sm text-kushan-subtle transition-colors hover:text-kushan-text" href="#collections">Collections</a>
+      <a class="text-sm text-kushan-subtle transition-colors hover:text-kushan-text" href="#featured">Shop All</a>
+      <a class="text-sm text-kushan-subtle transition-colors hover:text-kushan-text" href="#new">New</a>
+      <a class="text-sm text-kushan-subtle transition-colors hover:text-kushan-text" href="#about">About</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <button type="button" aria-label="Search" class="hidden rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-kushan-subtle transition-all hover:border-white/20 hover:text-kushan-text md:inline-flex">
+        <svg viewBox="0 0 24 24" class="mr-2 h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+        Search
+      </button>
+      <button type="button" aria-label="Account" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-kushan-subtle transition-all hover:border-white/20 hover:text-kushan-text">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 12a4 4 0 1 0-0.001-8.001A4 4 0 0 0 12 12Z"></path>
+          <path d="M4 20a8 8 0 0 1 16 0"></path>
+        </svg>
+      </button>
+      <button type="button" aria-label="Cart" class="inline-flex h-10 items-center gap-2 rounded-lg bg-[linear-gradient(90deg,var(--kushan-primary),#5b8eff)] px-3 text-sm font-semibold text-[#0b0d13] shadow-brand transition-transform hover:scale-[1.02] active:scale-[0.98]">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 3h2l2 12h10l2-8H6"></path>
+          <circle cx="9" cy="19" r="1.5"></circle>
+          <circle cx="17" cy="19" r="1.5"></circle>
+        </svg>
+        <span class="hidden sm:inline">Cart</span>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,58 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  darkMode: "class", // opt-in only; nothing auto-switches
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        kushan: {
+          primary: "#7c5cff",
+          accent: "#22d3ee",
+          surface: "#0e111a",
+          elevated: "#121524",
+          muted: "#171a26",
+          text: "#e8ecf3",
+          subtle: "#9aa4b2",
+        },
+      },
+      boxShadow: {
+        brand: "0 8px 30px rgba(124, 92, 255, 0.25)",
+        subtle: "0 10px 30px rgba(0,0,0,0.25)",
+      },
+      borderRadius: {
+        "2xl": "1.25rem",
+      },
+      keyframes: {
+        "fade-up": {
+          "0%": { opacity: "0", transform: "translateY(12px) scale(0.98)" },
+          "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
+        },
+        float: {
+          "0%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-6px)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+      },
+      animation: {
+        "fade-up": "fade-up 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards",
+        float: "float 6s ease-in-out infinite",
+        shimmer: "shimmer 2s linear infinite",
+      },
+      backgroundImage: {
+        "brand-gradient":
+          "radial-gradient(1200px 400px at 20% 10%, rgba(124, 92, 255, 0.25), transparent 60%), radial-gradient(900px 300px at 80% 20%, rgba(34, 211, 238, 0.18), transparent 60%), linear-gradient(180deg, #0e111a 0%, #0b0d13 100%)",
+      },
+    },
+  },
+  plugins: [],
+};
+export default config;
