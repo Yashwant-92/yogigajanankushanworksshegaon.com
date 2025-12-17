@@ -17,7 +17,13 @@ const nextConfig = {
 	eslint: {
 		ignoreDuringBuilds: true,
 	},
-	allowedDevOrigins: ["*.theopenbuilder.com"],
+	allowedDevOrigins: ["*.theopenbuilder.com", "*.yogigajanankushanworksshegaon.com"],
+	// For Netlify static hosting
+	output: 'export',
+	trailingSlash: true,
+	images: {
+		unoptimized: true
+	}
 };
 
 export default nextConfig;

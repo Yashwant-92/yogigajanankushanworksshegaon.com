@@ -1,0 +1,5 @@
+# Make sure you have the latest dependencies
+pnpm install
+
+# This will update the lockfile to match package.json
+pnpm install --frozen-lockfile=false
